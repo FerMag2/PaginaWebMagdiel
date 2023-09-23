@@ -8,49 +8,57 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenidos al Programa Células Plenum</h1>
-        <h3>Aquí encontraremos información para repasar temas de ingeniería de software, programación orientada a objetos y prácticas con java y Mysql</h3>
-        <h3>Autor: Fernando Magdiel Chi Canul</h3>
+        <img src="img/logotec.jpg" alt="Imagen Izquierda" class="header-image left">
+        <img src="img/logocelulas.png" alt="Imagen Derecha" class="header-image right">
+        <h1 class="header-title">Bienvenidos al Programa Células Plenum</h1>
+       
+        <h3 class="header-subtitle">Aquí encontraremos información para repasar temas de ingeniería de software, programación orientada a objetos y prácticas con Java y MySQL</h3>
+        <h3 class="header-author">Autor: Fernando Magdiel Chi Canul</h3>
 </header>
    <nav>
         <ul>
+            <li><a href="index.html" >Página de inicio</a></li>
             <li><a href="html/formulario.html" onclick="cargarContenido(this); return false;">Registrarse</a></li>
         </ul>
     </nav>
   
     <div class="container">
         <aside>
-            <h2>Menú</h2>
-            <h3>Unidad 1</h3>
+            <h2 class="menu-title">Menú</h2>
+            <h3 class="menu-title">Unidad 1</h3>
             <ul>
-                <li><a href="html/Tema1_1.html" onclick="cargarContenido(this); return false;">Tema 1.1</a></li>
-                <li><a href="html/Tema1_2.html" onclick="cargarContenido(this); return false;">Tema 1.2</a></li>
-                <li><a href="html/Tema1_3.html" onclick="cargarContenido(this); return false;">Tema 1.3</a></li>
-                <li><a href="html/Tema1_4.html" onclick="cargarContenido(this); return false;">Tema 1.4</a></li>
+                <li class="menu-title"><a href="html/Tema1_1.html" onclick="cargarContenido(this); return false;">Tema 1.1</a></li>
+                <li class="menu-title"><a href="html/Tema1_2.html" onclick="cargarContenido(this); return false;">Tema 1.2</a></li>
+                <li class="menu-title"><a href="html/Tema1_3.html" onclick="cargarContenido(this); return false;">Tema 1.3</a></li>
+                <li class="menu-title"><a href="html/Tema1_4.html" onclick="cargarContenido(this); return false;">Tema 1.4</a></li>
             </ul>
-            <h3>Unidad 2</h3>
+            <h3 class="menu-title">Unidad 2</h3>
             <ul>
-                <li><a href="html/Tema2_1.html" onclick="cargarContenido(this); return false;">Tema 2.1</a></li>
-                <li><a href="html/Tema2_2.html" onclick="cargarContenido(this); return false;">Tema 2.2</a></li>
-                <li><a href="html/Tema2_3.html" onclick="cargarContenido(this); return false;">Tema 2.3</a></li>
-                <li><a href="html/Tema2_4.html" onclick="cargarContenido(this); return false;">Tema 2.4</a></li>
-                <li><a href="html/Tema2_5.html" onclick="cargarContenido(this); return false;">Tema 2.5</a></li>
-                <li><a href="html/Tema2_6.html" onclick="cargarContenido(this); return false;">Tema 2.6</a></li>
+                <li class="menu-title"><a href="html/Tema2_1.html" onclick="cargarContenido(this); return false;">Tema 2.1</a></li>
+                <li class="menu-title"><a href="html/Tema2_2.html" onclick="cargarContenido(this); return false;">Tema 2.2</a></li>
+                <li class="menu-title"><a href="html/Tema2_3.html" onclick="cargarContenido(this); return false;">Tema 2.3</a></li>
+                <li class="menu-title"><a href="html/Tema2_4.html" onclick="cargarContenido(this); return false;">Tema 2.4</a></li>
+                <li class="menu-title"><a href="html/Tema2_5.html" onclick="cargarContenido(this); return false;">Tema 2.5</a></li>
+                <li class="menu-title"><a href="html/Tema2_6.html" onclick="cargarContenido(this); return false;">Tema 2.6</a></li>
             </ul>
         </aside>
-        <div id="contenido-cargado"></div>
+        <div id="contenido-cargado">
+            <div class="h1">
+                <center><h1>Programa Células Plenum</h1></center>
+                
+            </div>
+        
+            
+        </div>
     </div>
 
     <script>
         function cargarContenido(enlace) {
             const url = enlace.getAttribute("href");
             const contenidoCargado = document.getElementById("contenido-cargado");
-    
-            // Usa fetch para obtener el contenido de la URL
             fetch(url)
                 .then((response) => response.text())
                 .then((data) => {
-                    // Inserta el contenido en el div
                     contenidoCargado.innerHTML = data;
                 });
         }
