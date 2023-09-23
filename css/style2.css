@@ -18,7 +18,7 @@ body {
 
 h1 {
     font-size: 30px;
-    color: #092849;
+    color: #265180;
     text-align: center;
     text-transform: uppercase;
     margin-top: 20px;
@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     font-size: 24px;
-    color: #333;
+    color: #553aa8;
     text-align: center;
     margin-top: 20px;
 }
@@ -86,7 +86,7 @@ embed {
 
 .encabezado {
     font-size: 24px;
-    color: hsl(210, 87%, 9%);
+    color: #553aa8;
     margin-top: 20px;
 }
 .parent{
@@ -103,6 +103,7 @@ ul {
 
 li {
     font-size: 16px;
+    color: #99b4d8;
     margin-bottom: 10px;
 }
 
@@ -110,4 +111,5 @@ p {
     font-size: 16px;
     margin-top: 10px;
     line-height: 1.5;
+    color: #99b4d8;
 }
